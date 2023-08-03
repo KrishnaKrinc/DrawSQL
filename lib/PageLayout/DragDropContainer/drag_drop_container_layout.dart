@@ -29,8 +29,16 @@ class DragDropContainerLayout extends StatelessWidget {
                 child: Container(
                   width: 150,
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black45),
                     borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 2,
+                        blurRadius: 5,
+                        offset:
+                            const Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
                   ),
                   child: Column(
                     children: [
